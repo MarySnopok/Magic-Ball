@@ -40,14 +40,15 @@ const answers = [
 const ball = document.querySelector(".ball");
 const text = document.querySelector(".text p");
 const wrapper = document.querySelector(".wrapper");
-let animating = false;
+let inAnimationState = false;
 
 const ballAnswer = ball.addEventListener("click", function () {
-  if (animating) {
+  // Prevent reaction on user double clicking if animation is already initiated//
+  if (inAnimationState) {
     return;
   }
 
-  animating = true;
+  inAnimationState = true;
   text.classList.add("fadeOut");
   wrapper.classList.add("fadeOut");
   text.classList.remove("fadeIn");
@@ -70,6 +71,6 @@ const ballAnswer = ball.addEventListener("click", function () {
   }, 1000);
 
   setTimeout(function () {
-    animating = false;
-  }, 2000);
+    inAnimationState = false;
+  }, 1000);
 });
