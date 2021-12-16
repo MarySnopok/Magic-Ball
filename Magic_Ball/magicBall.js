@@ -25,7 +25,7 @@ const answers = [
   "Let it go",
   "It will be fine, soon...",
   "What your heart tells?",
-  "Do what fills right",
+  "Do what feels right",
   "Do not focus on it!",
   "Leave it for later",
   "Ask a human for advice!",
